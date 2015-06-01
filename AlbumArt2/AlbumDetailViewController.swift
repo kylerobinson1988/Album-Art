@@ -16,7 +16,6 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var artistName: UILabel!
     
-    
     @IBOutlet weak var albumName: UILabel!
     
     @IBOutlet weak var tracksTableView: UITableView!
@@ -96,6 +95,7 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
            
 
         }
+        
         
         
     }

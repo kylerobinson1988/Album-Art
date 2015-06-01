@@ -14,9 +14,15 @@ let reuseIdentifier = "albumCell"
 let iTunesSearchAPI = "https://itunes.apple.com/search"
 let iTunesLookupAPI = "https://itunes.apple.com/lookup"
 
-class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+var currentSearch: String = "Dragonforce"
+
+
+class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     var albums: [[String:AnyObject]] = []
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +32,32 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
 
         // Register cell classes
 //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        // Do any additional setup after loading the view.
+    }
+    
 
+    
+
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        currentSearch = ""
+        
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        currentSearch = "\(searchText)"
+        println("The changing text works.")
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
         var requestManager = AFHTTPRequestOperationManager()
         
-        requestManager.GET(iTunesSearchAPI + "?entity=album&term=Dragonforce", parameters: nil, success: { (request, data) -> Void in
+        requestManager.GET(iTunesSearchAPI + "?entity=album&term=\(currentSearch)", parameters: nil, success: { (request, data) -> Void in
             
             let info = data as! [String:AnyObject]
             
@@ -37,14 +65,16 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
             self.collectionView?.reloadData()
             
             
-        }) { (request, error) -> Void in
-            
-            println(error)
-            
+            }) { (request, error) -> Void in
+                
+                println(error)
+                
         }
         
-        // Do any additional setup after loading the view.
+        println("The button press works.")
+        
     }
+
     
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         

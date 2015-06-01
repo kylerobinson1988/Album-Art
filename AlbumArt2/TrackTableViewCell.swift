@@ -13,11 +13,14 @@ protocol TrackTableViewCellDelegate {
     func playSongWithURL(url: String)
     
     
+    
 }
 
 class TrackTableViewCell: UITableViewCell {
     
     var delegate: TrackTableViewCellDelegate?
+    
+    var buttonToggle: Int = 3
     
     var trackInfo: [String:AnyObject]! {
         
@@ -31,12 +34,29 @@ class TrackTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trackNameLabel: UILabel!
     
+    @IBOutlet weak var playButton: UIButton!
+    
     @IBAction func toggleSong(sender: UIButton) {
+        
+        buttonToggle += 1
+        
+        if buttonToggle % 2 == 0 {
+            
         
         if let url = trackInfo["previewUrl"] as? String {
             
             delegate?.playSongWithURL(url)
     
+        }
+        
+        playButton.backgroundColor = UIColor.redColor()
+    
+        } else if buttonToggle % 2 != 0 {
+            
+            
+            player?.stop
+            playButton.backgroundColor = UIColor.blueColor()
+            
         }
         
     }

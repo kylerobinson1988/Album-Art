@@ -38,14 +38,17 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="7aT-Qa-eZs">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="7aT-Qa-eZs" customClass="HeaderCollectionReusableView" customModule="AlbumArt2" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <searchBar contentMode="redraw" placeholder="Search" showsSearchResultsButton="YES" showsCancelButton="YES" scopeBarBackgroundImage="#000000" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-vo-lE4">
+                                <searchBar contentMode="redraw" text="" placeholder="Search" showsSearchResultsButton="YES" showsCancelButton="YES" scopeBarBackgroundImage="#000000" translatesAutoresizingMaskIntoConstraints="NO" id="Y8i-vo-lE4" customClass="AlbumCollectionSearchBar" customModule="AlbumArt2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="3" width="600" height="44"/>
                                     <color key="barTintColor" red="0.9921600223" green="0.76077997679999998" blue="0.20783999559999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="JwX-ix-4Ug" id="e7W-i6-Faz"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <constraints>
@@ -55,14 +58,15 @@
                                 <constraint firstAttribute="bottom" secondItem="Y8i-vo-lE4" secondAttribute="bottom" constant="3" id="ydU-4r-yXC"/>
                             </constraints>
                         </collectionReusableView>
-                        <connections>
-                            <outlet property="dataSource" destination="JwX-ix-4Ug" id="eey-u4-jI0"/>
-                            <outlet property="delegate" destination="JwX-ix-4Ug" id="kUt-nj-0kN"/>
-                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="P0K-I5-W0N"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42G-md-m9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="jk5-uc-DNP">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1192" y="303"/>
         </scene>
@@ -114,7 +118,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igR-S1-GW7">
                                                     <rect key="frame" x="495" y="4" width="94" height="35"/>
-                                                    <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="FaX-FL-TYq"/>
                                                         <constraint firstAttribute="width" constant="94" id="kCi-wW-fSy"/>
@@ -139,6 +143,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="playButton" destination="igR-S1-GW7" id="pVr-74-AdF"/>
                                             <outlet property="trackNameLabel" destination="fce-K5-skQ" id="4Ir-XU-mgz"/>
                                         </connections>
                                     </tableViewCell>

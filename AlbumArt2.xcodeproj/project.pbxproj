@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A654A51B1A3A4B00F517FD /* AlbumCollectionSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A654A41B1A3A4B00F517FD /* AlbumCollectionSearchBar.swift */; };
+		91A654A71B1A3AEA00F517FD /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A654A61B1A3AEA00F517FD /* HeaderCollectionReusableView.swift */; };
 		91DC28341B18A218002C0078 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 91DC28331B18A218002C0078 /* Podfile */; };
 		91DC28391B18E819002C0078 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC28381B18E819002C0078 /* TrackTableViewCell.swift */; };
 		91F87AF61B189BED009B920A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F87AF51B189BED009B920A /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		7AD942802C95865CB57AD486 /* Pods-AlbumArt2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumArt2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumArt2/Pods-AlbumArt2.debug.xcconfig"; sourceTree = "<group>"; };
+		91A654A41B1A3A4B00F517FD /* AlbumCollectionSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionSearchBar.swift; sourceTree = "<group>"; };
+		91A654A61B1A3AEA00F517FD /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		91DC28331B18A218002C0078 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		91DC28351B18A8AE002C0078 /* AlbumArt2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlbumArt2-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		91DC28381B18E819002C0078 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,8 +100,10 @@
 				91DC28351B18A8AE002C0078 /* AlbumArt2-Bridging-Header.h */,
 				91DC28331B18A218002C0078 /* Podfile */,
 				91F87AF91B189BED009B920A /* Main.storyboard */,
+				91A654A61B1A3AEA00F517FD /* HeaderCollectionReusableView.swift */,
 				91F87B151B189DD5009B920A /* AlbumCollectionViewController.swift */,
 				91F87AF71B189BED009B920A /* AlbumDetailViewController.swift */,
+				91A654A41B1A3A4B00F517FD /* AlbumCollectionSearchBar.swift */,
 				91F87B171B189EBB009B920A /* AlbumCollectionViewCell.swift */,
 				91DC28381B18E819002C0078 /* TrackTableViewCell.swift */,
 				91F87AF51B189BED009B920A /* AppDelegate.swift */,
@@ -302,9 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A654A71B1A3AEA00F517FD /* HeaderCollectionReusableView.swift in Sources */,
 				91DC28391B18E819002C0078 /* TrackTableViewCell.swift in Sources */,
 				91F87B181B189EBB009B920A /* AlbumCollectionViewCell.swift in Sources */,
 				91F87B161B189DD5009B920A /* AlbumCollectionViewController.swift in Sources */,
+				91A654A51B1A3A4B00F517FD /* AlbumCollectionSearchBar.swift in Sources */,
 				91F87AF81B189BED009B920A /* AlbumDetailViewController.swift in Sources */,
 				91F87AF61B189BED009B920A /* AppDelegate.swift in Sources */,
 			);
