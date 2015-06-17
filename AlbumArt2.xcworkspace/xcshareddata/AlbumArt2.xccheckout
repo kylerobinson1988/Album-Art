@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>697A7494-838E-4CE1-8F51-7F0E32CC7B02</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlbumArt2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F05D3A7AB72AF0C5CE0D175A7B1D2ADF2EE52943</key>
+		<string>https://github.com/kylerobinson1988/Album-Art.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlbumArt2.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F05D3A7AB72AF0C5CE0D175A7B1D2ADF2EE52943</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kylerobinson1988/Album-Art.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F05D3A7AB72AF0C5CE0D175A7B1D2ADF2EE52943</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F05D3A7AB72AF0C5CE0D175A7B1D2ADF2EE52943</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Album-Art-</string>
+		</dict>
+	</array>
+</dict>
+</plist>
